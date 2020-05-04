@@ -1,0 +1,17 @@
+<!-- #region Header -->
+<rhz-header id="rhz-header" class="transparent" (menuVisibilityEvent)="toggleMenuVisibility($event)"></rhz-header>
+<!-- #endregion Header -->
+
+<!-- #region Aside -->
+<rhz-aside id="rhz-aside" [hidden]="!menuVisibility"></rhz-aside>
+<!-- #endregion Aside -->
+
+<!-- #region Main -->
+<main id="main">
+    <router-outlet></router-outlet>
+</main>
+<!-- #endregion Main -->
+
+<!-- #region Footer -->
+<rhz-footer></rhz-footer>
+<!-- #region Footer -->

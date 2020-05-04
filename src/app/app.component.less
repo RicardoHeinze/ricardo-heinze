@@ -1,0 +1,73 @@
+@import '../assets/css/colors.less';
+@import '../assets/css/media.less';
+
+:host {
+    font-family: 'Nunito-Regular', 'Arial', 'Roboto', sans-serif;
+    --headerHeight: 60px;
+    
+    ::ng-deep{
+        @media @mobile{
+            .v-gap{
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+    
+            .container{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+    
+            .show-mobile{
+                display: block !important;
+            }
+            
+            .hide-mobile{
+                display: none !important;
+            }
+        }
+        
+        @media @tablet{
+            .container{
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+    
+            .show-tablet{
+                display: block !important;
+            }
+            
+            .hide-tablet{
+                display: none !important;
+            }
+        }
+        
+        @media @s-desktop{
+            .v-gap{
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+    
+            .container{
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            
+            .show-desktop{
+                display: block !important;
+            }
+            
+            .hide-desktop{
+                display: none !important;
+            }
+        }
+        
+        .container{
+            box-sizing: border-box;
+        }
+    }
+
+    #main{
+        position: relative;
+        z-index: 1;
+    }
+}

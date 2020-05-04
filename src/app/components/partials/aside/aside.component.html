@@ -1,0 +1,11 @@
+<aside id="aside">
+    <div class="aside-foreground animated slideInLeft">
+        <nav class="menu-navigation">
+            <ul class="menu-list">
+                <li class="list-item" *ngFor="let item of menuList">
+                    <a class="link" [routerLink]="['/' + item.Route]" routerLinkActive="router-link-active">{{item.Name}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

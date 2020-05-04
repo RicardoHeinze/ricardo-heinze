@@ -1,0 +1,81 @@
+@import '../../../../assets/css/colors.less';
+
+.transition(@property: all, @duration: 0.45s, @ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: @property @duration @ease;
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+    font-size: inherit;
+    width: 205px;
+
+    .circle {
+        width: 48px;
+        height: 48px;
+        .transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        margin: 0;
+        background-color: @bluepasteldark;
+        border-radius: 1.625rem;
+
+        .icon {
+            .transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            &.white {
+                filter: invert(1);
+            }
+
+            &::before {
+                display: block;
+                width: 48px;
+                height: 100%;
+                content: '';
+                background-size: 80%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+          
+            &.print{
+                &::before {
+                    background-image: url('/assets/imgs/icons/DownArrow.svg');
+                }
+            }
+        }
+    }
+
+    .button-text {
+        .transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 0 0 1.85rem;
+        color: @bluepasteldark;
+        font-family: Poppins-SemiBold;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        .circle {
+            width: 100%;
+
+            .icon {
+                transform: translate(0.55rem, 0);
+            }
+        }
+
+        .button-text {
+            color: @white !important;
+        }
+    }
+}
