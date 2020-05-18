@@ -1,0 +1,16 @@
+<section id="portfolioSection" class="portfolio-section v-gap container" >
+    <div class="section-box">
+        <div class="titles-container">
+            <h2 class="title white">{{'{'}} Portfólio {{'}'}}</h2>
+        </div>
+        <div class="carousel-container">
+            <owl-carousel-o [options]="carouselOptions">
+                <ng-container *ngFor="let item of carouselItems">
+                    <ng-template [id]="item.ID" carouselSlide>
+                        <div class="slide" [ngClass]="'id-' + item.ID" [ngStyle]="{'background-image': 'url(/assets/imgs/projects/' + item.ImgURL + ')'}"></div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

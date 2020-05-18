@@ -1,0 +1,165 @@
+@import '../../../../assets/css/colors.less';
+@import '../../../../assets/css/media.less';
+
+:host{
+    .portfolio-section{
+        background-color: @lightgray2;
+        height: 70vh;
+
+        @media @m-desktop {
+            height: 100vh;
+        }
+
+        .section-box{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+
+            .titles-container{
+                height: max-content;
+
+                .title{
+                    color: @bluepasteldark;
+                }
+            }
+    
+            .carousel-container{
+                display: block;
+                height: 100%;
+                flex: 1;
+                margin: 0 -20px;
+
+                ::ng-deep{
+                    owl-carousel-o{
+                        display: block;
+                        height: 100%;
+
+                        .owl-carousel{
+                            display: block;
+                            height: 100%;
+                            position: relative;
+
+                            .owl-stage-outer{
+                                display: block;
+                                height: 100%;
+    
+                                div,
+                                owl-stage{
+                                    display: block;
+                                    height: 100%;
+
+                                    .owl-item{
+                                        box-sizing: border-box;
+
+                                        .slide{
+                                            display: block;
+                                            background-repeat: no-repeat;
+                                            background-position: top left -60px;
+                                            background-size: cover;
+
+                                            &.id-0,
+                                            &.id-1{
+                                                background-position: top center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .owl-nav{
+                                display: none;
+                                margin: 0;
+
+                                .owl-prev,
+                                .owl-next{
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    margin: 0;
+                                    padding: 0;
+                                    background: transparent;
+                                    width: 23px;
+                                    height: 23px;                                
+
+                                    .arrow{
+                                        display: block;
+                                        border: 3px solid @bluepasteldark;
+                                        border-top: none;
+                                        border-left: none;
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 3px;
+                                        box-sizing: border-box;
+                                    }
+                                }
+
+                                .owl-prev{
+                                    left: -38px;
+
+                                    @media @s-desktop {
+                                        left: -50px;
+                                    }
+
+                                    .arrow{
+                                        transform: rotate(135deg);
+                                    }
+                                }
+
+                                .owl-next{
+                                    right: -38px;
+
+                                    @media @s-desktop {
+                                        right: -50px;
+                                    }
+
+                                    .arrow{
+                                        transform: rotate(-45deg);
+                                    }
+                                }
+                            }
+
+                            .owl-dots{
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @media @tablet {
+            .section-box{
+                .carousel-container{
+                    margin: 0;
+
+                    ::ng-deep{
+                        owl-carousel-o{    
+                            .owl-carousel{
+                                .owl-stage-outer{
+                                    owl-stage {
+                                        .owl-item{
+                                            padding: 0 10px;
+                                            .slide{
+                                                border-radius: 3px;
+                                                border: 1px solid #dbdbdb;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .owl-nav{
+                                    display: block;
+                                }
+
+                                .owl-dots{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,92 +1,40 @@
 @import '../../../../assets/css/colors.less';
 @import '../../../../assets/css/media.less';
 
-.profile-section{
-    min-height: 50vh;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    column-gap: 50px;
-    row-gap: 50px;
-
-    .section-box{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        line-height: 1.2;
-
-        .title,
-        .subtitle,
-        .text{
-            width: fit-content;
-        }
-
-        .title{
-            color: @bluepastel;
-            font-family: 'Poppins-Bold';
-            text-transform: uppercase;
-            cursor: context-menu;
-            font-size: 24px;
-            margin-bottom: 30px;
-
-            @media @tablet{
-                font-size: 54px;
-                margin-bottom: 45px;
+:host{
+    .profile-section{
+        min-height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        column-gap: 50px;
+        row-gap: 50px;
+    
+        .section-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.2;
+    
+            .link{
+                color: @marketupgreen;
+                font-family: Nunito-SemiBold;
             }
-
-            &:hover{
-                background: linear-gradient(-45deg, @purplepastel, @bluepastel);
-                background-size: 400% 400%;
-                animation: backgroundGradientAnimation 3s ease infinite;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+    
+            rhz-link{
+                margin-top: 30px;
             }
         }
-
-        .subtitle{
-            font-family: 'Poppins-Regular';
-            font-size: 18px;
-            color: @bluepasteldark;
-
-            @media @tablet{
-                font-size: 24px;
+    
+        @keyframes backgroundGradientAnimation {
+            0% {
+                background-position: 0% 50%;
             }
-        }
-
-        .text{
-            font-size: 16px;
-            color: @black;
-            margin-bottom: 15px;
-            font-family: 'Nunito-Light';
-
-            &:first-of-type{
-                margin-top: 25px;
+            50% {
+                background-position: 100% 50%;
             }
-            
-            &:last-of-type{
-                margin-bottom: 0;
+            100% {
+                background-position: 0% 50%;
             }
-        }
-
-        .link{
-            color: @marketupgreen;
-            font-family: Nunito-SemiBold;
-        }
-
-        rhz-link{
-            margin-top: 30px;
-        }
-    }
-
-    @keyframes backgroundGradientAnimation {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
         }
     }
 }

@@ -1,3 +1,71 @@
+@import '../../../assets/css/colors.less';
+@import '../../../assets/css/media.less';
+
 :host {
     display: block;
+
+    ::ng-deep{
+        .title,
+        .subtitle,
+        .text{
+            width: fit-content;
+        }
+
+        .title{
+            line-height: 1.25;
+            font-family: 'Poppins-Bold';
+            text-transform: uppercase;
+            cursor: context-menu;
+            font-size: 24px;
+            margin-bottom: 30px;
+
+            @media @tablet{
+                font-size: 44px;
+                margin-bottom: 45px;
+            }
+
+            &.colored{
+                color: @bluepastel;
+            }
+
+            &.white{
+                color: @white;
+            }
+
+            &.backgroundGradientAnimation{
+                &:hover{
+                    background: linear-gradient(-45deg, @purplepastel, @bluepastel);
+                    background-size: 400% 400%;
+                    animation: backgroundGradientAnimation 3s ease infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        .subtitle{
+            font-family: 'Poppins-Regular';
+            font-size: 18px;
+            color: @bluepasteldark;
+
+            @media @tablet{
+                font-size: 24px;
+            }
+        }
+
+        .text{
+            font-size: 16px;
+            color: @black;
+            margin-bottom: 15px;
+            font-family: 'Nunito-Light';
+
+            &:first-of-type{
+                margin-top: 25px;
+            }
+            
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
 }
