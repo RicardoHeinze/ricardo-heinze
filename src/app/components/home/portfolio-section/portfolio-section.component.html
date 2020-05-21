@@ -7,7 +7,13 @@
             <owl-carousel-o [options]="carouselOptions">
                 <ng-container *ngFor="let item of carouselItems">
                     <ng-template [id]="item.ID" carouselSlide>
-                        <div class="slide" [ngClass]="'id-' + item.ID" [ngStyle]="{'background-image': 'url(/assets/imgs/projects/' + item.ImgURL + ')'}"></div>
+                        <div class="slide animated delay-0-3s">
+                            <div class="img" (mouseleave)="currentHoverSlide = null" (mouseover)="currentHoverSlide = item.ID" [ngClass]="{'ng-hover': currentHoverSlide === item.ID}" class="{{'id-' + item.ID}}" [ngStyle]="{'background-image': 'url(/assets/imgs/projects/' + item.ImgURL + ')'}">
+                                <div class="img-overlay animated fadeIn" *ngIf="currentHoverSlide === item.ID">
+                                    <rhz-button class="btn-slide animated fadeInUp" type="button" [title]="item.Name" [hover]="false" [text]="item.Name" bgColor="#fff" color="#283642"></rhz-button>
+                                </div>
+                            </div>
+                        </div>
                     </ng-template>
                 </ng-container>
             </owl-carousel-o>

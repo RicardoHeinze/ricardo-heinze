@@ -8,13 +8,15 @@ import { HomeComponent } from './home.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
+import { KnowledgeSectionComponent } from './knowledge-section/knowledge-section.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProfileSectionComponent,
     MainSectionComponent,
-    PortfolioSectionComponent
+    PortfolioSectionComponent,
+    KnowledgeSectionComponent
   ],
   imports: [
     CommonModule,

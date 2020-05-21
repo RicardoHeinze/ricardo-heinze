@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { CarouselItem } from 'src/app/models/Carousel';
+import { Types }  from 'src/app/models/Types';
 
 @Component({
   selector: 'rhz-portfolio-section',
@@ -10,14 +10,12 @@ import { CarouselItem } from 'src/app/models/Carousel';
 export class PortfolioSectionComponent implements OnInit {
   carouselOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     dots: true,
     navSpeed: 700,
     navText: ['<i class="arrow arrow-previous"></i>', '<i class="arrow arrow-next"></i>'],
-    animateIn: 'animated fadeIn',
-    animateOut: 'animated fadeOut',
     responsive: {
       0: {
         items: 1
@@ -29,7 +27,8 @@ export class PortfolioSectionComponent implements OnInit {
     nav: true
   };
 
-  carouselItems: Array<CarouselItem> = [];
+  carouselItems: Array<Types.CarouselItem> = [];
+  currentHoverSlide: number = null;
 
   constructor() { }
 
@@ -38,12 +37,12 @@ export class PortfolioSectionComponent implements OnInit {
   }
 
   setCarouselItems(): void {
-    this.carouselItems.push(new CarouselItem(0, 'MarketUP', 'marketup.png'));
-    this.carouselItems.push(new CarouselItem(1, 'Gestão Mei', 'gestao_mei.png'));
-    this.carouselItems.push(new CarouselItem(2, 'MarketUP Compras', 'marketplace.png'));
-    this.carouselItems.push(new CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png'));
-    this.carouselItems.push(new CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png'));
-    this.carouselItems.push(new CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png'));
+    this.carouselItems.push(new Types.CarouselItem(0, 'MarketUP', 'marketup.png'));
+    this.carouselItems.push(new Types.CarouselItem(1, 'Gestão Mei', 'gestao_mei.png'));
+    this.carouselItems.push(new Types.CarouselItem(2, 'MarketUP Compras', 'marketplace.png'));
+    this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png'));
+    this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png'));
+    this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png'));
     this.carouselItems
   }
 

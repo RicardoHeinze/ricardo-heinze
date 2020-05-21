@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Inject, HostListener } from '@angular/core';
-import { MenuItem } from 'src/app/models/MenuItem';
-import { GeneralService } from 'src/app/services/general.service';
+import { Types } from 'src/app/models/Types';
+import { MenuService } from 'src/app/services/general.service';
 import { Utils } from 'src/app/utils/Utils';
 import { DOCUMENT } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./aside.component.less']
 })
 export class AsideComponent implements OnInit {
-  menuList: Array<MenuItem> = [];
+  menuList: Array<Types.MenuItem> = [];
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -24,9 +24,9 @@ export class AsideComponent implements OnInit {
     }
   }
 
-  constructor(@Inject(DOCUMENT) private document: Document, private generalService: GeneralService) { }
+  constructor(@Inject(DOCUMENT) private document: Document, private menuService: MenuService) { }
 
   ngOnInit(): void {
-    this.menuList = this.generalService.getMenuList();
+    this.menuList = this.menuService.getMenuList();
    }
 }

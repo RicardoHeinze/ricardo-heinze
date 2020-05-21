@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
-import { MenuItem } from '../models/MenuItem';
+import { Types } from '../models/Types';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GeneralService {
+export class MenuService {
+  menuList: Array<Types.MenuItem> = [];
+  constructor() {
+    this.setMenuList();
+  }
 
-  constructor() { }
+  setMenuList(): void {
+    this.menuList.push(new Types.MenuItem(1, 'Home', ''));
+    this.menuList.push(new Types.MenuItem(2, 'Mini CV.', 'cv'));
+    this.menuList.push(new Types.MenuItem(3, 'Portfolio', 'portfolio'));
+    this.menuList.push(new Types.MenuItem(4, 'Contato', 'contato'));
 
-  getMenuList(): Array<MenuItem> {
-    const menuList = new Array<MenuItem>();
+  }
 
-    menuList.push(new MenuItem(1, 'Home', ''));
-    menuList.push(new MenuItem(2, 'Mini CV.', 'cv'));
-    menuList.push(new MenuItem(3, 'Portfolio', 'portfolio'));
-    menuList.push(new MenuItem(4, 'Contato', 'contato'));
-
-    return menuList;
+  getMenuList(): Array<Types.MenuItem> {
+    return this.menuList;
   }
 }

@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './components/home/home.module';
 import { PartialsModule } from './components/partials/partials.module';
 
-import { Router, RouterModule } from '@angular/router';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -19,9 +17,7 @@ import { Router, RouterModule } from '@angular/router';
     HomeModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    // Router,
-    // RouterModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

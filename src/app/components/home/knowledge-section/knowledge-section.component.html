@@ -1,0 +1,17 @@
+<section id="knowledgeSection" class="knowledge-section v-gap container">
+    <div class="section-box">
+        <div class="titles-container">
+            <h2 class="title white">{{'{'}} Conhecimentos {{'}'}}</h2>
+        </div>
+        <div class="gallery-container">
+            <ul class="knowledge-list">
+                <li class="knowledge" *ngFor="let item of knowledgeList">
+                    <figure class="knowledge-figure" [title]="item.Name">
+                        <img class="img" [alt]="item.Name" [src]="'/assets/imgs/skills/' + item.imgURL">
+                        <figcaption class="figcaption">{{item.Name}}</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

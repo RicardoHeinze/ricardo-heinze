@@ -4,11 +4,8 @@
 :host{
     .portfolio-section{
         background-color: @lightgray2;
-        height: 70vh;
-
-        @media @m-desktop {
-            height: 100vh;
-        }
+        height: 85vh;
+        padding-bottom: 80px;
 
         .section-box{
             display: flex;
@@ -27,39 +24,66 @@
                 display: block;
                 height: 100%;
                 flex: 1;
-                margin: 0 -20px;
+                //margin: 0 -20px;
 
                 ::ng-deep{
                     owl-carousel-o{
                         display: block;
                         height: 100%;
 
-                        .owl-carousel{
+                        .owl-carousel,
+                        .owl-stage-outer,
+                        .owl-stage-outer div,
+                        .owl-stage-outer owl-stage {
                             display: block;
                             height: 100%;
+                        }
+
+                        .owl-carousel{
                             position: relative;
 
-                            .owl-stage-outer{
-                                display: block;
-                                height: 100%;
-    
-                                div,
+                            .owl-stage-outer{    
                                 owl-stage{
-                                    display: block;
-                                    height: 100%;
-
                                     .owl-item{
-                                        box-sizing: border-box;
-
+                                        &.active{
+                                            .slide{
+                                                -webkit-animation-name: fadeIn;
+                                                animation-name: fadeIn;
+                                            }
+                                        }
+                                        
                                         .slide{
-                                            display: block;
-                                            background-repeat: no-repeat;
-                                            background-position: top left -60px;
-                                            background-size: cover;
+                                            overflow: hidden;
+                                            position: relative;
 
-                                            &.id-0,
-                                            &.id-1{
-                                                background-position: top center;
+                                            .img{
+                                                display: block;
+                                                background-repeat: no-repeat;
+                                                background-position: top left -60px;
+                                                background-size: cover;
+                                                transition-duration: 1s;
+                                                -moz-transition-property: transform;
+                                                
+                                                &.ng-hover{
+                                                    transform: scale(1.1);
+                                                    
+                                                }
+
+                                                &.id-0,
+                                                &.id-1{
+                                                    background-position: top center;
+                                                }
+
+                                                .img-overlay{
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    background-color: rgba(136,182,219,0.8);
+                                                    display: grid;
+                                                    align-items: center;
+                                                    justify-items: center;
+                                                }
                                             }
                                         }
                                     }
@@ -67,19 +91,17 @@
                             }
 
                             .owl-nav{
-                                display: none;
                                 margin: 0;
 
                                 .owl-prev,
                                 .owl-next{
                                     position: absolute;
-                                    top: 50%;
-                                    transform: translateY(-50%);
                                     margin: 0;
                                     padding: 0;
                                     background: transparent;
-                                    width: 23px;
-                                    height: 23px;                                
+                                    width: 9px;
+                                    height: 9px;  
+                                    bottom: -20px;                          
 
                                     .arrow{
                                         display: block;
@@ -94,11 +116,7 @@
                                 }
 
                                 .owl-prev{
-                                    left: -38px;
-
-                                    @media @s-desktop {
-                                        left: -50px;
-                                    }
+                                    left: 47px;
 
                                     .arrow{
                                         transform: rotate(135deg);
@@ -106,11 +124,7 @@
                                 }
 
                                 .owl-next{
-                                    right: -38px;
-
-                                    @media @s-desktop {
-                                        right: -50px;
-                                    }
+                                    right: 47px;
 
                                     .arrow{
                                         transform: rotate(-45deg);
@@ -119,14 +133,26 @@
                             }
 
                             .owl-dots{
-                                padding-top: 10px;
+                                display: flex;
+                                margin: 10px auto 0;
+                                width: 145px;
+                                justify-content: space-between;
+                                
+                                .owl-dot{
+                                    width: 15px;
+                                    height: 10px;
+                                    background-color: @gray;
+
+                                    &.active{
+                                        background-color: @bluepastel;
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
         }
-
 
         @media @tablet {
             .section-box{
@@ -147,9 +173,23 @@
                                         }
                                     }
                                 }
-
+                                
                                 .owl-nav{
-                                    display: block;
+                                    .owl-prev,
+                                    .owl-next{
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        width: 23px;
+                                        height: 23px;    
+                                    }
+
+                                    .owl-prev{
+                                        left: -28px;
+                                    }
+
+                                    .owl-next{
+                                        right: -28px;
+                                    }
                                 }
 
                                 .owl-dots{
@@ -160,6 +200,33 @@
                     }
                 }
             }
+        }
+
+        @media @s-desktop {
+            .section-box{
+                .carousel-container{
+                    ::ng-deep{
+                        owl-carousel-o{
+                            .owl-carousel{
+    
+                                .owl-nav{
+                                    .owl-prev{
+                                            left: -50px;
+                                    }
+    
+                                    .owl-next{
+                                            right: -50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media @m-desktop {
+            height: 100vh;
         }
     }
 }

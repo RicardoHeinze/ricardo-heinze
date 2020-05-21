@@ -10,7 +10,22 @@
     cursor: pointer;
     background: transparent;
     font-size: inherit;
-    width: 205px;
+    min-width: 205px;
+    &.hover{
+        &:hover {
+            .circle {
+                width: 100%;
+    
+                .icon {
+                    transform: translate(0.55rem, 0);
+                }
+            }
+    
+            .button-text {
+                color: @white !important;
+            }
+        }
+    }
 
     .circle {
         width: 48px;
@@ -65,17 +80,15 @@
         text-transform: uppercase;
     }
 
-    &:hover {
-        .circle {
-            width: 100%;
+    &.no-icon{
+        justify-content: center;
+        border-radius: 30px;
+        width: fit-content;
+        padding: 0 10px;
 
-            .icon {
-                transform: translate(0.55rem, 0);
-            }
-        }
-
-        .button-text {
-            color: @white !important;
+        .button-text{
+            position: initial;
+            margin: 0;
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, HostListener, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { MenuItem } from 'src/app/models/MenuItem';
-import { GeneralService } from 'src/app/services/general.service';
+import { Types } from 'src/app/models/Types';
+import { MenuService } from 'src/app/services/general.service';
 import { Utils } from 'src/app/utils/Utils';
 
 @Component({
@@ -12,7 +12,7 @@ import { Utils } from 'src/app/utils/Utils';
 export class HeaderComponent implements OnInit {
   @Output() menuVisibilityEvent: EventEmitter<boolean> = new EventEmitter();
   menuVisibility: boolean = false;
-  menuList: Array<MenuItem> = [];
+  menuList: Array<Types.MenuItem> = [];
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -25,10 +25,10 @@ export class HeaderComponent implements OnInit {
       rhzHeader.classList.add('transparent');
     }
   }
-  constructor(@Inject(DOCUMENT) private document: Document, private generalService: GeneralService) { }
+  constructor(@Inject(DOCUMENT) private document: Document, private menuService: MenuService) { }
 
   ngOnInit(): void {
-    this.menuList = this.generalService.getMenuList();
+    this.menuList = this.menuService.getMenuList();
   }
 
   toggleMenuVisibility(): void {
