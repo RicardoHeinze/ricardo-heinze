@@ -9,7 +9,7 @@ import { Types } from 'src/app/models/Types';
 })
 export class KnowledgeSectionComponent implements OnInit {
   knowledgeList: Array<Types.KnowledgeItem>
-  
+
   constructor(private knowledgeService: KnowledgeService) { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <section id="portfolioSection" class="portfolio-section v-gap container" >
-    <div class="section-box">
+    <div class="section-box" data-aos="fade-in" data-aos-once="true" data-aos-duration="700">
         <div class="titles-container">
             <h2 class="title white">{{'{'}} Portfólio {{'}'}}</h2>
         </div>
@@ -7,10 +7,10 @@
             <owl-carousel-o [options]="carouselOptions">
                 <ng-container *ngFor="let item of carouselItems">
                     <ng-template [id]="item.ID" carouselSlide>
-                        <div class="slide animated delay-0-3s">
+                        <div class="slide">
                             <div class="img" (mouseleave)="currentHoverSlide = null" (mouseover)="currentHoverSlide = item.ID" [ngClass]="{'ng-hover': currentHoverSlide === item.ID}" class="{{'id-' + item.ID}}" [ngStyle]="{'background-image': 'url(/assets/imgs/projects/' + item.ImgURL + ')'}">
-                                <div class="img-overlay animated fadeIn" *ngIf="currentHoverSlide === item.ID">
-                                    <rhz-button class="btn-slide animated fadeInUp" type="button" [title]="item.Name" [hover]="false" [text]="item.Name" bgColor="#fff" color="#283642"></rhz-button>
+                                <div class="img-overlay" data-aos="fade-in" data-aos-once="true" data-aos-duration="700" *ngIf="currentHoverSlide === item.ID">
+                                    <rhz-button data-aos="fade-up" data-aos-once="true" data-aos-duration="700" class="btn-slide" type="button" [title]="item.Name" [hover]="false" [text]="item.Name" bgColor="#fff" color="#283642"></rhz-button>
                                 </div>
                             </div>
                         </div>

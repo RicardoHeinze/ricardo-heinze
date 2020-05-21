@@ -28,15 +28,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "src/styles.less",
               "src/assets/css/reset.less",
               "src/assets/css/fonts.less",
-              "src/assets/css/animation.less",
               "src/assets/css/media.less",
               "src/assets/css/scrollbar.less"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {

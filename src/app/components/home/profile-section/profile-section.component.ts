@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'rhz-profile-section',
   templateUrl: './profile-section.component.html',
