@@ -1,5 +1,3 @@
-
-
 export class Utils{
     static lockWindow(): void {
         document.getElementById('body').style.overflowY = 'hidden';

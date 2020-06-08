@@ -1,61 +1,10 @@
 @import '../../../../assets/css/colors.less';
 @import '../../../../assets/css/media.less';
 
-.main-section {
-    position: relative;
-    display: flex;
-    align-items: center;
+:host{
+    display: block;
     height: 100vh;
-
-    .home-titles-wrapper {
-        z-index: 3;
-        position: relative;
-        color: @white;
-        max-width: 730px;
-
-        .description,
-        .text{
-            line-height: 1.1;
-        }
-
-        .title {
-            font-size: 36px;
-            margin: 3px 0 6px;
-            font-family: 'Poppins-Semibold';
-            text-transform: uppercase;
-
-            &:after{
-                content: '';
-                background: linear-gradient(to right, orange, transparent);
-                width: 80%;
-                height: 1px;
-                display: block;
-            }
-
-            @media @tablet{
-                font-size: 60px;
-            }
-        }
-
-        .description {
-            font-family: 'Poppins-Regular';
-
-            &:first-of-type {
-                font-size: 28px;
-            }
-
-            &:last-of-type {
-                font-size: 24px;
-                margin-bottom: 35px;;
-            }
-        }
-
-        .text{
-            font-size: 20px;
-            font-family: 'Poppins-Light';
-            color: @white;
-        }
-    }
+    position: relative;
 
     &:after,
     &:before {
@@ -79,5 +28,62 @@
         z-index: 2;
         background-color: @black;
         opacity: 0.75;
+    }
+
+    .main-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .home-titles-wrapper {
+            z-index: 3;
+            position: relative;
+            color: @white;
+            max-width: 730px;
+    
+            .description,
+            .text{
+                line-height: 1.1;
+            }
+    
+            .title {
+                font-size: 36px;
+                margin: 3px 0 6px;
+                font-family: 'Poppins-Semibold';
+                text-transform: uppercase;
+    
+                &:after{
+                    content: '';
+                    background: linear-gradient(to right, orange, transparent);
+                    width: 80%;
+                    height: 1px;
+                    display: block;
+                }
+    
+                @media @tablet{
+                    font-size: 60px;
+                }
+            }
+    
+            .description {
+                font-family: 'Poppins-Regular';
+    
+                &:first-of-type {
+                    font-size: 28px;
+                }
+    
+                &:last-of-type {
+                    font-size: 24px;
+                    margin-bottom: 35px;;
+                }
+            }
+    
+            .text{
+                font-size: 20px;
+                font-family: 'Poppins-Light';
+                color: @white;
+            }
+        }
     }
 }

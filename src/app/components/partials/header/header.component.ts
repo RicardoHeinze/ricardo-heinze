@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, HostListener, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Types } from 'src/app/models/Types';
-import { MenuService } from 'src/app/services/general.service';
+import { MenuService } from 'src/app/services/menu.service';
 import { Utils } from 'src/app/utils/Utils';
 
 @Component({

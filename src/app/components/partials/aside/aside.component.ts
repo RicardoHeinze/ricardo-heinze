@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Inject, HostListener } from '@angular/core';
 import { Types } from 'src/app/models/Types';
-import { MenuService } from 'src/app/services/general.service';
+import { MenuService } from 'src/app/services/menu.service';
 import { Utils } from 'src/app/utils/Utils';
 import { DOCUMENT } from '@angular/common';
 

@@ -1,0 +1,17 @@
+<section id="formationSection" class="formation-section v-gap container">
+    <div class="section-box" data-aos="fade-in" data-aos-once="true" data-aos-duration="700">
+        <div class="titles-container">
+            <h2 class="title white">{{'{'}} Formação {{'}'}}</h2>
+        </div>
+    </div>
+    <div class="timeline-box">
+        <a class="step" [attr.href]="item.CertificationURL ? item.CertificationURL : null" [title]="item.Course" target="_blank" class="{{'step-' + index}}" [ngClass]="{'left': index % 2 === 0, 'right': index % 2 !== 0}" *ngFor="let item of coursesList; index as index">
+            <div class="title-box">
+                <h3 class="title">{{item.Institution}}</h3>
+                <time class="finish-date">{{item.FinishDate}}</time>
+            </div>
+            <p class="description">{{item.Course}}</p>
+        </a>
+        <hr class="timeline-progress">
+    </div>
+</section>

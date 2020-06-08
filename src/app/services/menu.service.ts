@@ -15,7 +15,6 @@ export class MenuService {
     this.menuList.push(new Types.MenuItem(2, 'Mini CV.', 'cv'));
     this.menuList.push(new Types.MenuItem(3, 'Portfolio', 'portfolio'));
     this.menuList.push(new Types.MenuItem(4, 'Contato', 'contato'));
-
   }
 
   getMenuList(): Array<Types.MenuItem> {
