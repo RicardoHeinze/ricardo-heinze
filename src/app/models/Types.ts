@@ -24,4 +24,8 @@ export module Types {
     export class Course {
         constructor(public ID: number, public Course: string, public Institution: string, public FinishDate: string, public CertificationURL?: string) {}
     }
+
+    export class Contact {
+        constructor(public ID: number, public Name: string, public Value: string, public Icon: string, public Action: string) {}
+    }
 }

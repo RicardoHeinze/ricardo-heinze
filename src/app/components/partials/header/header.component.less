@@ -4,8 +4,7 @@
 :host {
     position: fixed;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: block;
     background-color: @darkblue;
     z-index: 3;
     height: calc(~'var(--headerHeight) + 20px');
@@ -48,14 +47,11 @@
         }
     }
 
-    @media @tablet{
-        background-color: 'transaparent';
-    }
-
     #header {
         width: 100%;
         display: flex;
         align-items: center;
+        height: 100%;
 
         .hamburger {
             padding: 15px 15px;

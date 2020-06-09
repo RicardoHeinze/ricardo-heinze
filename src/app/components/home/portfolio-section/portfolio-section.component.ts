@@ -43,7 +43,7 @@ export class PortfolioSectionComponent implements OnInit {
     this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png'));
     this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png'));
     this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png'));
-    this.carouselItems
+    this.carouselItems.push(new Types.CarouselItem(6, 'MarketUP Blog', 'marketup_blog.png'));
   }
 
 }

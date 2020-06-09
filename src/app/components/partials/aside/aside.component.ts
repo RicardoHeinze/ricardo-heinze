@@ -1,8 +1,8 @@
-import { Component, OnInit, EventEmitter, Output, Inject, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { Types } from 'src/app/models/Types';
 import { MenuService } from 'src/app/services/menu.service';
 import { Utils } from 'src/app/utils/Utils';
-import { DOCUMENT } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'rhz-aside',
@@ -10,6 +10,9 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./aside.component.less']
 })
 export class AsideComponent implements OnInit {
+  menuVisibility: boolean = false;
+  menuVisibilitySubscribe: Subscription;
+
   menuList: Array<Types.MenuItem> = [];
 
   @HostListener('window:scroll', [])
@@ -24,9 +27,14 @@ export class AsideComponent implements OnInit {
     }
   }
 
-  constructor(@Inject(DOCUMENT) private document: Document, private menuService: MenuService) { }
-
+  constructor(private menuService: MenuService) { }
+  
   ngOnInit(): void {
     this.menuList = this.menuService.getMenuList();
+   }
+
+   closeMenu(): void {
+    Utils.unlockWindow();
+    this.menuService.setMenuVisibilityObs(false);
    }
 }

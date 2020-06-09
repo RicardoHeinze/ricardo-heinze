@@ -1,18 +1,18 @@
 <header id="header" class="container">
   <button (click)="toggleMenuVisibility()" [ngClass]="{'is-active': menuVisibility}"
-    class="hamburger hamburger--emphatic show-mobile hide-tablet" type="button">
+    class="hamburger hamburger--emphatic" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
-  <nav class="menu-navigation hide-mobile show-tablet">
+  <!-- <nav class="menu-navigation hide-mobile show-tablet">
     <ul class="menu-list">
       <li class="list-item" *ngFor="let item of menuList">
-        <a class="link text" [routerLink]="['/' + item.Route]"
+        <a class="link text" [fragment]="item.Route" [routerLink]="['/']"
           routerLinkActive="router-link-active">{{item.Name}}</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
   <div class="logo-wrapper">
     <a class="link text" href="/home">Ricardo Heinze</a>
   </div>

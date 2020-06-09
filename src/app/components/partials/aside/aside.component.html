@@ -3,9 +3,10 @@
         <nav class="menu-navigation">
             <ul class="menu-list">
                 <li class="list-item" data-aos="fade-right" *ngFor="let item of menuList">
-                    <a class="link" [routerLink]="['/' + item.Route]" routerLinkActive="router-link-active">{{item.Name}}</a>
+                    <a class="link" [routerLink]="['/']" [fragment]="item.Route" (click)="closeMenu()" routerLinkActive="router-link-active">{{item.Name}}</a>
                 </li>
             </ul>
         </nav>
     </div>
+    <div (click)="closeMenu()" class="background hide-mobile show-tablet"></div>
 </aside>

@@ -11,6 +11,7 @@ import { PortfolioSectionComponent } from './portfolio-section/portfolio-section
 import { KnowledgeSectionComponent } from './knowledge-section/knowledge-section.component';
 import { ProfessionalExperienceSectionComponent } from './professional-experience-section/professional-experience-section.component';
 import { FormationSectionComponent } from './formation-section/formation-section.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormationSectionComponent } from './formation-section/formation-section
     PortfolioSectionComponent,
     KnowledgeSectionComponent,
     ProfessionalExperienceSectionComponent,
-    FormationSectionComponent
+    FormationSectionComponent,
+    ContactSectionComponent
   ],
   imports: [
     CommonModule,

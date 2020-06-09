@@ -1,22 +1,27 @@
-import { Component, OnInit, EventEmitter, Output, HostListener, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { Types } from 'src/app/models/Types';
 import { MenuService } from 'src/app/services/menu.service';
 import { Utils } from 'src/app/utils/Utils';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'rhz-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
-export class HeaderComponent implements OnInit {
-  @Output() menuVisibilityEvent: EventEmitter<boolean> = new EventEmitter();
+export class HeaderComponent implements OnInit, OnDestroy {
+  menuVisibilitySubscribe: Subscription;
+  fragmentSubscribe: Subscription;
+
   menuVisibility: boolean = false;
   menuList: Array<Types.MenuItem> = [];
+  fragment: string;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const rhzHeader = document.getElementById('rhz-header');
+
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       rhzHeader.classList.remove('transparent');
       rhzHeader.classList.add('filled');
@@ -25,10 +30,25 @@ export class HeaderComponent implements OnInit {
       rhzHeader.classList.add('transparent');
     }
   }
-  constructor(@Inject(DOCUMENT) private document: Document, private menuService: MenuService) { }
+
+  constructor(private menuService: MenuService, private route: ActivatedRoute) { }
+
+  ngOnDestroy(): void {
+    if(this.menuVisibilitySubscribe){
+      this.menuVisibilitySubscribe.unsubscribe();
+    }
+
+    if(this.fragmentSubscribe){
+      this.fragmentSubscribe.unsubscribe
+    }
+  }
 
   ngOnInit(): void {
     this.menuList = this.menuService.getMenuList();
+    this.fragmentSubscribe = this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+    this.menuVisibilitySubscribe = this.menuService.getMenuVisibilityObs().subscribe(menuVisibility => {
+      this.menuVisibility = menuVisibility
+    });
   }
 
   toggleMenuVisibility(): void {
@@ -39,7 +59,7 @@ export class HeaderComponent implements OnInit {
     } else {
       Utils.unlockWindow();
     }
-    
-    this.menuVisibilityEvent.emit(this.menuVisibility);
+
+    this.menuService.setMenuVisibilityObs(this.menuVisibility)
   }
 }

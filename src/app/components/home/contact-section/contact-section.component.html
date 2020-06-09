@@ -1,0 +1,18 @@
+<section id="contactSection" class="contact-section v-gap container" >
+    <div class="section-box" data-aos="fade-in" data-aos-once="true" data-aos-duration="700">
+        <div class="titles-container">
+            <h2 class="title">{{'{'}} Contato {{'}'}}</h2>
+        </div>
+    </div>
+    <div class="contact-box">
+        <ul class="contact-list">
+            <li class="contact-wrapper" *ngFor="let item of contactList; let index = index">
+                <a class="contact" [href]="item.Action">
+                    <img class="icon" [src]="'/assets/imgs/contact/' + item.Icon + '.png'" [alt]="item.Name">
+                    <p class="name">{{item.Name}}</p>
+                    <p class="value">{{item.Value}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

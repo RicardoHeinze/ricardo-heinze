@@ -1,4 +1,5 @@
 @import '../../../../assets/css/colors.less';
+@import '../../../../assets/css/media.less';
 
 :host{
     position: fixed;
@@ -11,6 +12,10 @@
     width: 100%;
     height: calc(~'100% - var(--headerHeight) - 20px');
     background-color: @darkblue;
+
+    @media @tablet {
+        width: 450px;
+    }
 
     &.filled{
         margin-top: var(--headerHeight);
@@ -33,19 +38,27 @@
                     }
                 }
             }
-        }
+
+            .background{
+                top: var(--headerHeight);
+                // top: calc(~'var(--headerHeight) + 20px');
+            }
+        }   
     }
 
     #aside{
         width: 100%;
         height: 100%;
         position: relative;
+        background-color: inherit;
 
         .aside-foreground{
             display: flex;
             position: relative;
             width: 100%;
             height: 100%;
+            z-index: 2;
+            background-color: inherit;
 
             .menu-navigation{
                 width: 100%;
@@ -80,6 +93,18 @@
                     }
                 }
             }
+        }
+
+        .background{
+            position: fixed;
+            top: calc(~'var(--headerHeight) + 20px');
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
     }
 }
