@@ -33,8 +33,7 @@
               "src/styles.less",
               "src/assets/css/reset.less",
               "src/assets/css/fonts.less",
-              "src/assets/css/media.less",
-              "src/assets/css/scrollbar.less"
+              "src/assets/css/media.less"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"

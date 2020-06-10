@@ -1,12 +1,14 @@
+@import '../../../../assets/css/colors.less';
+@import '../../../../assets/css/media.less';
+
 :host{
     display: block;
-    //background: url(/assets/imgs/keyboard-bg.jpg) no-repeat;
+    background: url(/assets/imgs/pug-muito-loco.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 
     .contact-section{
-        min-height: 100vh;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -17,43 +19,83 @@
             .contact-list{
                 height: 100%;
                 display: grid;
-                grid-template-columns: repeat(3, 150px);
+                grid-template-columns: repeat(auto-fit, minmax(100px, 285px));
                 grid-auto-rows: 150px;
                 row-gap: 50px;
                 justify-content: space-between;
+                column-gap: 50px;
+                justify-content: center;
 
                 .contact-wrapper{
                     display: grid;
+                    place-items: center;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+                    border-radius: 5px;
+                    background-color: @white;
+
+                    &:hover{
+                        background-color: @bluepastel;
+
+                        .contact{
+                            .box{
+                                .icon{
+                                    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg) brightness(105%) contrast(102%);
+                                }
+        
+                                .name,
+                                .value {
+                                    color: @white;
+                                }
+                            }
+                        }
+                    }
 
                     .contact{
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
+                        justify-content: center;
                         padding: 10px;
-                        width: 100%;
-                        height: 100%;
-                        border: 1px solid lightgray;
-                        border-radius: 5px;
                         transition: 200ms all ease-in;
-    
-                        &:hover{
-                            margin: auto;
-                            width: calc(~'100% - 6px');
-                            height: calc(~'100% - 6px');
-                        }
-    
-                        .icon{
-                            width: 75px;
-                        }
-    
-                        .name{
-    
-                        }
-    
-                        .value{
-                            font-size: 14px;
+                        height: 100%;
+                        width: 100%;
+
+                        .box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .icon{
+                                width: 55px;
+                                filter: invert(69%) sepia(36%) saturate(353%) hue-rotate(165deg) brightness(95%) contrast(90%);
+                            }
+        
+                            .name{
+                                margin-bottom: 5px;
+                                margin-top: 7px;
+                                font-family: 'Poppins-SemiBold';
+                                font-size: 15px;
+                                color: @bluepasteldark;
+                            }
+        
+                            .value{
+                                font-size: 14px;
+                                font-family: 'Poppins-Light';
+                            }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @media @m-desktop {
+        .contact-section {
+            .contact-box{
+                .contact-list{
+                    grid-template-columns: repeat(3, 285px);
+                    justify-content: space-between;
                 }
             }
         }
