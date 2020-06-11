@@ -75,7 +75,7 @@
         }
 
         .button-text {
-            //color: @white !important;
+            color: @white !important;
         }
     }
 
@@ -88,6 +88,12 @@
         .button-text{
             position: initial;
             margin: 0;
+        }
+
+        &:hover{
+            .button-text{
+                color: inherit !important;
+            }
         }
     }
 }
