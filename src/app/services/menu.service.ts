@@ -23,11 +23,11 @@ export class MenuService {
 
   setMenuList(): void {
     this.menuList.push(new Types.MenuItem(1, 'Desenvolvedor', 'profileSection'));
-    this.menuList.push(new Types.MenuItem(2, 'Portfólio.', 'portfolioSection'));
+    this.menuList.push(new Types.MenuItem(2, 'Portfólio', 'portfolioSection'));
     this.menuList.push(new Types.MenuItem(3, 'Conhecimentos', 'knowledgeSection'));
-    this.menuList.push(new Types.MenuItem(4, 'Experiência', 'experienceSection'));
-    this.menuList.push(new Types.MenuItem(4, 'Formação', 'professionalExperienceSection'));
-    this.menuList.push(new Types.MenuItem(4, 'Contato', 'contactSection'));
+    this.menuList.push(new Types.MenuItem(4, 'Experiência', 'professionalExperienceSection'));
+    this.menuList.push(new Types.MenuItem(5, 'Formação', 'formationSection'));
+    this.menuList.push(new Types.MenuItem(6, 'Contato', 'contactSection'));
   }
 
   getMenuList(): Array<Types.MenuItem> {
