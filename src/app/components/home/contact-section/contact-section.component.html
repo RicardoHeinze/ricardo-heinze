@@ -7,7 +7,7 @@
     <div class="contact-box">
         <ul class="contact-list">
             <li class="contact-wrapper" *ngFor="let item of contactList; let index = index">
-                <a class="contact" [title]="item.Name" [href]="item.Action">
+                <a class="contact" [title]="item.Name" target="_blank" [href]="item.Action">
                     <div class="box">
                         <img class="icon" [src]="'/assets/imgs/contact/' + item.Icon + '.png'" [alt]="item.Name">
                         <p class="name">{{item.Name}}</p>

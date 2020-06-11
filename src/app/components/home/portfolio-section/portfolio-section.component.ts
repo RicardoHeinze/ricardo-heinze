@@ -28,7 +28,7 @@ export class PortfolioSectionComponent implements OnInit {
   };
 
   carouselItems: Array<Types.CarouselItem> = [];
-  currentHoverSlide: number = null;
+  currentHoverSlide: number = 1;
 
   constructor() { }
 
@@ -37,13 +37,13 @@ export class PortfolioSectionComponent implements OnInit {
   }
 
   setCarouselItems(): void {
-    this.carouselItems.push(new Types.CarouselItem(0, 'MarketUP', 'marketup.png'));
-    this.carouselItems.push(new Types.CarouselItem(1, 'Gestão Mei', 'gestao_mei.png'));
-    this.carouselItems.push(new Types.CarouselItem(2, 'MarketUP Compras', 'marketplace.png'));
-    this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png'));
-    this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png'));
-    this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png'));
-    this.carouselItems.push(new Types.CarouselItem(6, 'MarketUP Blog', 'marketup_blog.png'));
+    this.carouselItems.push(new Types.CarouselItem(0, 'MarketUP', 'marketup.png','https://marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(1, 'Bradesco Gestão Mei', 'gestao_mei.png', 'https://gestaomei.com.br/'));
+    this.carouselItems.push(new Types.CarouselItem(2, 'MarketUP Compras', 'marketplace.png', 'https://compras.marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png', 'https://marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png', 'https://marketup.com/recursos/pdv'));
+    this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png', 'https://www.santander.com.br/copiloto'));
+    this.carouselItems.push(new Types.CarouselItem(6, 'MarketUP Blog', 'marketup_blog.png', 'https://marketup.com/blog/'));
   }
 
 }

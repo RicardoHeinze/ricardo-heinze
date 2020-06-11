@@ -10,7 +10,7 @@
                         <div class="slide">
                             <div class="img" (mouseleave)="currentHoverSlide = null" (mouseover)="currentHoverSlide = item.ID" [ngClass]="{'ng-hover': currentHoverSlide === item.ID}" class="{{'id-' + item.ID}}" [ngStyle]="{'background-image': 'url(/assets/imgs/projects/' + item.ImgURL + ')'}">
                                 <div class="img-overlay" data-aos="fade-in" data-aos-once="true" data-aos-duration="700" *ngIf="currentHoverSlide === item.ID">
-                                    <rhz-button data-aos="fade-up" data-aos-once="true" data-aos-duration="700" class="btn-slide" type="button" [title]="item.Name" [hover]="false" [text]="item.Name" bgColor="#fff" color="#283642"></rhz-button>
+                                    <rhz-link data-aos="fade-up" data-aos-once="true" data-aos-duration="700" class="btn-slide" [href]="item.Action" [title]="item.Name" [target]="'_blank'" [hover]="false" [text]="item.Name" bgColor="#fff" color="#283642"></rhz-link>
                                 </div>
                             </div>
                         </div>
