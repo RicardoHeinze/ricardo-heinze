@@ -1,17 +1,20 @@
 <section id="professionalExperienceSection" class="professional-experience-section v-gap container">
     <div class="section-box" data-aos="fade-in" data-aos-once="true" data-aos-duration="700">
         <div class="titles-container">
-            <h2 class="title colored">{{'{'}} Experiência {{'}'}}</h2>
-            <h3 class="subtitle">Experiências que obtive durante a minha carreira profissional</h3>
+            <h2 class="title">{{'{'}} Experiência {{'}'}}</h2>
+            <h3 class="subtitle">Experiências que conquistei durante minha trajetória profissional</h3>
         </div>
         <div class="professional-experience-container">
             <ul class="company-list">
                 <li class="company marketup" *ngFor="let professionalExperience of professionalExperienceList; index as index">
-                    <h4 class="company-title">{{professionalExperience.Company}}</h4>
-                    <ul class="experience-list">
+                    <div class="accordion-header backgroundGradientAnimation" [title]="professionalExperience.Company" (click)="openAccordion(professionalExperience.ID)">
+                        <h4 class="company-title">{{professionalExperience.Company}}</h4>
+                        <div class="btn-toggle-accordion" [ngClass]="{active: currentAccordion === professionalExperience.ID}" type="button"></div>
+                    </div>
+                    <ul class="experience-list" *ngIf="currentAccordion === professionalExperience.ID">
                         <li class="experience" *ngFor="let experience of professionalExperience.Experiences">
-                            <p class="experience-title">{{experience.Project}}</p>
-                            <p class="experience-description">{{experience.Description}}</p>
+                            <p class="exp-title">{{experience.Project}}</p>
+                            <p class="exp-description">{{experience.Description}}</p>
                         </li>
                     </ul>
                 </li>

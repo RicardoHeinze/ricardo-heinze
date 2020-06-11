@@ -9,6 +9,7 @@ import { Types } from 'src/app/models/Types';
 })
 export class ProfessionalExperienceSectionComponent implements OnInit {
   professionalExperienceList: Array<Types.ProfessionalExperience> = [];
+  currentAccordion: number = 1;
 
   constructor(private experienceService: ExperienceService) { }
 
@@ -16,4 +17,12 @@ export class ProfessionalExperienceSectionComponent implements OnInit {
     this.professionalExperienceList = this.experienceService.getProfessionalExperiencesItems();
   }
 
+  openAccordion(ID: number) {
+    if(this.currentAccordion === ID){
+      this.currentAccordion = null;
+      return;
+    }
+
+    this.currentAccordion = ID;
+  }
 }
