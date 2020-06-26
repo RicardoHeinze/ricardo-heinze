@@ -18,10 +18,8 @@
 
     &:after {
         z-index: 1;
-        background: url('src/assets/imgs/home9.png') no-repeat;
-        background-size: cover;
+        background: url('src/assets/imgs/mobile/home.webp') no-repeat center / cover fixed;
         filter: hue-rotate(45deg) grayscale(0.45) blur(1px);
-        background-attachment: fixed;
     }
 
     &:before {
@@ -84,6 +82,22 @@
                 font-family: 'Poppins-Light';
                 color: @white;
             }
+        }
+    }
+}
+
+@media @tablet {
+    :host{
+        &:after{
+            background: url('src/assets/imgs/tablet/home.webp') no-repeat center / cover fixed;
+        }
+    }
+}
+
+@media @s-desktop {
+    :host{
+        &:after{
+            background: url('src/assets/imgs/desktop/home.webp') no-repeat center / cover fixed;
         }
     }
 }

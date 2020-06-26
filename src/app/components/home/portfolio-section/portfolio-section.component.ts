@@ -37,13 +37,14 @@ export class PortfolioSectionComponent implements OnInit {
   }
 
   setCarouselItems(): void {
-    this.carouselItems.push(new Types.CarouselItem(0, 'MarketUP', 'marketup.png','https://marketup.com'));
-    this.carouselItems.push(new Types.CarouselItem(1, 'Bradesco Gestão Mei', 'gestao_mei.png', 'https://gestaomei.com.br/'));
-    this.carouselItems.push(new Types.CarouselItem(2, 'MarketUP Compras', 'marketplace.png', 'https://compras.marketup.com'));
-    this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.png', 'https://marketup.com'));
-    this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.png', 'https://marketup.com/recursos/pdv'));
-    this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.png', 'https://www.santander.com.br/copiloto'));
-    this.carouselItems.push(new Types.CarouselItem(6, 'MarketUP Blog', 'marketup_blog.png', 'https://marketup.com/blog/'));
+    this.carouselItems.push(new Types.CarouselItem(0, 'MarketUP', 'marketup.webp','https://marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(1, 'Bradesco Gestão Mei', 'gestao_mei.webp', 'https://gestaomei.com.br/'));
+    this.carouselItems.push(new Types.CarouselItem(2, 'MarketUP Compras', 'marketplace.webp', 'https://compras.marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(3, 'MarketUP ERP', 'marketup_erp.webp', 'https://marketup.com'));
+    this.carouselItems.push(new Types.CarouselItem(4, 'Drogaria Carrefour POS', 'marketup_pos_carrefour.webp', 'https://marketup.com/recursos/pdv'));
+    this.carouselItems.push(new Types.CarouselItem(5, 'Santander Gestão Empresarial Digital', 'marketup_santander.webp', 'https://www.santander.com.br/copiloto'));
+    this.carouselItems.push(new Types.CarouselItem(6, 'MarketUP Blog', 'marketup_blog.webp', 'https://marketup.com/blog/'));
+    this.carouselItems.push(new Types.CarouselItem(7, 'Pókemon Trading Card Game', 'pokemon_trading_card_game.webp', 'http://www.pokemon-tcg.com.br.s3-website-us-east-1.amazonaws.com/'));
   }
 
 }
