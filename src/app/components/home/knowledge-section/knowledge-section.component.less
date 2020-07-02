@@ -1,12 +1,9 @@
-@import '../../../../assets/css/colors.less';
-@import '../../../../assets/css/media.less';
+@import '../../../../assets/less/colors.less';
+@import '../../../../assets/less/media.less';
 
 :host{
     display: block;
-    background: url(/assets/imgs/keyboard-bg.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url(/assets/imgs/mobile/keyboard-bg.webp) no-repeat center / cover fixed;
     
     .knowledge-section {
         display: block;
@@ -77,6 +74,8 @@
     }
 
     @media @tablet{
+        background: url(/assets/imgs/tablet/keyboard-bg.webp) no-repeat center / cover fixed;
+
         .knowledge-section{
             height: 100vh;
             .section-box{    
@@ -93,6 +92,8 @@
     }
 
     @media @s-desktop {
+        background: url(/assets/imgs/desktop/keyboard-bg.webp) no-repeat center / cover fixed;
+        
         .knowledge-section{
 
             .section-box{    

@@ -1,4 +1,4 @@
-<a class="btn" [ngClass]="{'no-icon': icon === null, 'hover': hover}" [href]="href" [title]="text" [attr.target]="target ? target : null"  [ngStyle]="{'background-color': icon === null ? bgColor : 'initial'}">
+<a class="btn" [ngClass]="{'no-icon': icon === null, 'hover': hover}" [href]="href" [title]="text" [attr.target]="target ? target : null" [attr.download]="download ? '' : null"  [ngStyle]="{'background-color': icon === null ? bgColor : 'initial'}">
     <span *ngIf="icon" class="circle" aria-hidden="true" [ngStyle]="{'background-color': color}">
       <span class="icon" [ngClass]="icon"></span>
     </span>

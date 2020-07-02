@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: local('Nunito-Bold');
+    src: url('/assets/fonts/nunito/Nunito-Bold.ttf');
+    src: url('/assets/fonts/nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: local('Nunito-Light');
+    src: url('/assets/fonts/nunito/Nunito-Light.ttf');
+    src: url('/assets/fonts/nunito/Nunito-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: local('Nunito-Regular');
+    src: url('/assets/fonts/nunito/Nunito-Regular.ttf');
+    src: url('/assets/fonts/nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: local('Nunito-SemiBold');
+    src: url('/assets/fonts/nunito/Nunito-SemiBold.ttf');
+    src: url('/assets/fonts/nunito/Nunito-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: local('Poppins-Bold');
+    src: url('/assets/fonts/poppins/Poppins-Bold.ttf');
+    src: url('/assets/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: local('Poppins-Light');
+    src: url('/assets/fonts/poppins/Poppins-Light.ttf');
+    src: url('/assets/fonts/poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: local('Poppins-Regular');
+    src: url('/assets/fonts/poppins/Poppins-Regular.ttf');
+    src: url('/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: local('Poppins-SemiBold');
+    src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf');
+    src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Qwigley-Regular';
+    src: local('Qwigley-Regular');
+    src: url('/assets/fonts/qwigley/Qwigley-Regular.ttf');
+    src: url('/assets/fonts/qwigley/Qwigley-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+}

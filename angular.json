@@ -31,9 +31,8 @@
               "node_modules/aos/dist/aos.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "src/styles.less",
-              "src/assets/css/reset.less",
-              "src/assets/css/fonts.less",
-              "src/assets/css/media.less"
+              "src/assets/css/reset.css",
+              "src/assets/css/fonts.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"

@@ -28,7 +28,7 @@ export class PortfolioSectionComponent implements OnInit {
   };
 
   carouselItems: Array<Types.CarouselItem> = [];
-  currentHoverSlide: number = 1;
+  currentHoverSlide: number;
 
   constructor() { }
 
