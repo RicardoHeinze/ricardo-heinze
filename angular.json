@@ -129,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ricardo-heinze"
+    }
+  },
+  "defaultProject": "ricardo-heinze",
+  "cli": {
+    "analytics": "35a084e2-b722-4e22-85f8-c4b4e4973276"
+  }
 }

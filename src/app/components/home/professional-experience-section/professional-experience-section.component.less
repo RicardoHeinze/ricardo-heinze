@@ -1,83 +1,92 @@
-@import '../../../../assets/less/colors.less';
-@import '../../../../assets/less/media.less';
+@import "../../../../assets/less/colors.less";
+@import "../../../../assets/less/media.less";
 
-:host{
-    .professional-experience-section{
-        .section-box{
-            .titles-container{
-                .title{
-                    color: @purplepastel;
-                }
-            }
-
-            .professional-experience-container{
-                margin-top: 35px;
-
-                .company-list{
-                    .company{
-                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-
-                        .accordion-header,
-                        .experience-list{
-                            padding: 20px;
-                        }
-
-                        .accordion-header{
-                            padding: 10px 20px;
-                            min-height: 50px;
-                            display: flex;
-                            align-items: center;
-                            background: linear-gradient(-45deg, @bluepastel, @purplepastel);
-                            justify-content: space-between;
-                            cursor: pointer;
-
-                            .company-title{
-                                color: @white;
-                                font-size: 18px;
-                                font-family: 'Poppins-SemiBold';
-                                line-height: 1.2;
-                            }
-
-                            .btn-toggle-accordion{
-                                width: 40px;
-                                height: 40px;
-                                position: relative;
-                                background-color: transparent;
-                                display: block;
-                                background: url('/assets/imgs/icons/ExpandArrow.svg') no-repeat center;
-                                background-size: 70%;
-                                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg) brightness(105%) contrast(102%);
-                                transition: 200ms all linear;
-
-                                &.active{
-                                    transform: scaleY(-1);
-                                    background-position: center 7px;
-                                }
-                            }
-                        }
-
-                        .experience-list{
-                            .experience{
-                                margin-bottom: 15px;
-
-                                &:last-of-type{
-                                    margin-bottom: 0;
-                                }
-
-                                .exp-title{
-                                    font-family: 'Poppins-Regular';
-                                    font-size: 17px;
-                                    padding-bottom: 3px;
-                                }
-
-                                .exp-description{
-                                    font-size: 14px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+:host {
+  .professional-experience-section {
+    .section-box {
+      .titles-container {
+        .title {
+          color: @purplepastel;
         }
+      }
+
+      .professional-experience-container {
+        margin-top: 35px;
+
+        .company-list {
+          .company {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+            .accordion-header,
+            .experience-list {
+              padding: 20px;
+            }
+
+            .accordion-header {
+              padding: 10px 20px;
+              min-height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              cursor: pointer;
+
+              .company-title {
+                color: @white;
+                font-size: 18px;
+                font-family: "Poppins-SemiBold";
+                line-height: 1.2;
+              }
+
+              .btn-toggle-accordion {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-color: transparent;
+                display: block;
+                background: url("/assets/imgs/icons/ExpandArrow.svg") no-repeat
+                  center;
+                background-size: 70%;
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg)
+                  brightness(105%) contrast(102%);
+                transition: 200ms all linear;
+
+                &.active {
+                  transform: scaleY(-1);
+                  background-position: center 7px;
+                }
+              }
+
+              &.marketup {
+                background: linear-gradient(-45deg, @marketupgreen, @greenpastel);
+              }
+
+              &.orbitall {
+                background: linear-gradient(-45deg, @bluepastel, @orbitallblue);
+              }
+            }
+
+            .experience-list {
+              .experience {
+                margin-bottom: 15px;
+
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+
+                .exp-title {
+                  font-family: "Poppins-Regular";
+                  font-size: 17px;
+                  padding-bottom: 3px;
+                }
+
+                .exp-description {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }

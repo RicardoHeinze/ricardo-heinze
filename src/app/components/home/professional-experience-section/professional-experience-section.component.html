@@ -6,8 +6,8 @@
         </div>
         <div class="professional-experience-container">
             <ul class="company-list">
-                <li class="company marketup" *ngFor="let professionalExperience of professionalExperienceList; index as index">
-                    <div class="accordion-header backgroundGradientAnimation" [title]="professionalExperience.Company" (click)="openAccordion(professionalExperience.ID)">
+                <li class="company" *ngFor="let professionalExperience of professionalExperienceList; index as index">
+                    <div class="accordion-header backgroundGradientAnimation" [ngClass]="professionalExperience.Name" [title]="professionalExperience.Company" (click)="openAccordion(professionalExperience.ID)">
                         <h4 class="company-title">{{professionalExperience.Company}}</h4>
                         <div class="btn-toggle-accordion" [ngClass]="{active: currentAccordion === professionalExperience.ID}" type="button"></div>
                     </div>
