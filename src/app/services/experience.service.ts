@@ -39,8 +39,36 @@ export class ExperienceService {
     experienceList.push(
       new Types.Experience(
         1,
-        "App Ipiranga",
-        "Desenvolvimento de aplicativo de core bancário com diversas funcionalidades: transferências, extrato, recarga, pagamento de contas, PIX, entre outros"
+        "Aplicativo Ipiranga AbasteceAi PJ",
+        "Construção de aplicativo de core bancário com integração a funcionalidades do PIX – React Native / Typescript / Styled Components"
+      )
+    );
+    experienceList.push(
+      new Types.Experience(
+        2,
+        "Aplicativo Bib Bahamas",
+        "Reescrita de aplicativo bancário utilizando Typescript para implementação de funcionalidade de multi-idiomas – React Native / Typescript / Styled Components"
+      )
+    );
+    experienceList.push(
+      new Types.Experience(
+        3,
+        "Aplicativo Whitelabel",
+        "Construção de aplicativo de core bancário whitelabel totalmente parametrizável para diversos clientes – React Native / Typescript / Styled Components"
+      )
+    );
+    experienceList.push(
+      new Types.Experience(
+        4,
+        "Backoffice Orbitall",
+        "Construção de sistema web responsivo whitelabel para gerenciamento de clientes e transações que utilizavam nosso core bancário – React / Typescript / GraphQL / Styled Components"
+      )
+    );
+    experienceList.push(
+      new Types.Experience(
+        5,
+        "Aplicativo Fidiscard ",
+        "Implementação de aplicativo para gerenciamento de cartões – React Native / Typescript / Styled Components"
       )
     );
     return experienceList;

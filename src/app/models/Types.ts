@@ -10,7 +10,7 @@ export module Types {
       public ID: number,
       public Name: string,
       public ImgURL: string,
-      public Action: string
+      public Action?: string
     ) {}
   }
 
